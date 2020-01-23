@@ -1,29 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { color } from '../../designTokens';
 import {
   StyledButton,
   StyledContentsWrapper,
   StyledContents,
   SpinnerWrapper
 } from './styles'
+import Spinner from '../Spinner';
 
-const Button = ({ children, awaiting, primary, ...rest }) => (
-  <StyledButton primary={primary} {...rest}>
+const Button = ({ children, awaiting, disabled, ...rest }) => (
+  <StyledButton
+    disabled={disabled || awaiting}
+    {...rest}
+  >
     <StyledContentsWrapper>
       <StyledContents>
         {children}
       </StyledContents>
       {awaiting &&
         <SpinnerWrapper>
-          <SpinnerCircle color={primary ? '#fff' : '#c6c6c6'} />
+          <Spinner fill={color.white} size='0.75rem' />
         </SpinnerWrapper>}
     </StyledContentsWrapper>
   </StyledButton>
 )
 
 Button.propTypes = {
-  primary: PropTypes.bool,
   awaiting: PropTypes.bool,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,

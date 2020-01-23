@@ -1,8 +1,12 @@
 import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
+import { withKnobs } from '@storybook/addon-knobs';
 
 import { GlobalStyle } from '../src/globalStyles.js';
 
+addDecorator(withInfo);
+addDecorator(withKnobs);
 addDecorator(story => (
   <>
     <GlobalStyle />

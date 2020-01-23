@@ -7,7 +7,6 @@ const StyledButton = styled.button`
   font-weight: 600;
   font-size: 1rem;
   line-height: 1;
-  width: 100%;
   padding: 0.625rem 0.5rem;
   color: ${color.white};
   border: 0.125rem solid ${color.red};
@@ -29,11 +28,6 @@ const StyledButton = styled.button`
     pointer-events: none;
     cursor: default;
   }
-
-  @media screen and (min-width: 25rem)
-  {
-    width: auto;
-  }
 `
 
 const StyledContentsWrapper = styled.span`
@@ -54,6 +48,7 @@ const StyledContents = styled.span`
 
 const SpinnerWrapper = styled.span`
   display: flex;
+  padding: 0 0.5rem 0 0;
 `
 
 export {
