@@ -4,7 +4,7 @@
   "description": "trying out storybook with react and rollup",
   "main": "index.js",
   "scripts": {
-    "storybook": "start-storybook"
+    "storybook": "start-storybook --ci --port 6006"
   },
   "repository": {
     "type": "git",

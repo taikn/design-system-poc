@@ -19,8 +19,9 @@ const StyledSpinner = styled.div`
   transform-origin: 100% 100%;
   transform: rotate(0deg);
   animation-name: ${rotate};
-  animation-duration: 0.6s;
+  animation-duration: 0.55s;
   animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
 `
 
 export {
