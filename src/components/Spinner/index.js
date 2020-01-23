@@ -3,11 +3,16 @@ import PropTypes from 'prop-types'
 import { color } from '../../designTokens'
 
 import {
-  StyledSpinner
+  StyledRectContainer,
+  StyledTopRect,
+  StyledLeftRect
 } from './styles'
 
-const Spinner = (props) => (
-  <StyledSpinner {...props} />
+const Spinner = ({ size, fill }) => (
+  <StyledRectContainer size={size}>
+    <StyledTopRect fill={fill} />
+    <StyledLeftRect fill={fill} />
+  </StyledRectContainer>
 )
 
 Spinner.propTypes = {
