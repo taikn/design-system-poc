@@ -9,8 +9,9 @@ export default {
 
 export const Primary = () =>
   <PrimaryButton
-    onClick={action('button-click')}
+    alternate={boolean('Alternate')}
     awaiting={boolean('Awaiting')}
+    onClick={action('button-click')}
   >
     {text("Label", "Verify your email")}
   </PrimaryButton>;

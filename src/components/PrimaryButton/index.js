@@ -28,6 +28,7 @@ const Button = ({ children, awaiting, disabled, ...rest }) => (
 )
 
 Button.propTypes = {
+  alternate: PropTypes.bool,
   awaiting: PropTypes.bool,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,

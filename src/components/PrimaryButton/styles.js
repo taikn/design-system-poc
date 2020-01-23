@@ -1,5 +1,6 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { color, typography } from '../../designTokens'
+import { lighten } from 'polished'
 
 const StyledButton = styled.button`
   font-family: ${typography.type.primary};
@@ -9,16 +10,28 @@ const StyledButton = styled.button`
   line-height: 1;
   padding: 0.625rem 0.5rem;
   color: ${color.white};
-  border: 0.125rem solid ${color.red};
-  background-color: ${color.red};
+  border: ${props => props.alternate
+    ? css`
+      0.125rem solid ${color.dark}
+    `
+    : css`
+      0.125rem solid ${color.red}
+    `};
+  background-color: ${props => props.alternate
+    ? color.dark
+    : color.red};
   outline: none;
   user-select: none;
   cursor: pointer;
 
   :hover
   {
-    border-color: #FF443A;
-    background-color: #FF443A;
+    border-color: ${props => props.alternate
+      ? lighten(0.05, color.dark)
+      : lighten(0.05, color.red)};
+    background-color: ${props => props.alternate
+      ? lighten(0.05, color.dark)
+      : lighten(0.05, color.red)};
   }
 
   :disabled
