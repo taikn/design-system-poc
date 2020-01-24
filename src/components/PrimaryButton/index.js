@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { color } from '../../designTokens';
+import { color } from '../../designTokens'
 import {
   StyledButton,
   StyledContentsWrapper,
   StyledContents,
   SpinnerWrapper
 } from './styles'
-import Spinner from '../Spinner';
+import Spinner from '../Spinner'
 
 const Button = ({ children, awaiting, disabled, ...rest }) => (
   <StyledButton

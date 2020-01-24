@@ -6,18 +6,22 @@ const slideTop = keyframes`
   {
     top: 0%;
   }
+
   10%
   {
     top: 50%;
   }
+
   50%
   {
     top: 50%;
   }
+
   60%
   {
     top: 0%;
   }
+
   100%
   {
     top: 0%;
@@ -29,24 +33,27 @@ const slideLeft = keyframes`
   {
     left: 0%;
   }
+
   10%
   {
     left: 50%;
   }
+
   50%
   {
     left: 50%;
   }
+
   60%
   {
     left: 0%;
   }
+
   100%
   {
     left: 0%;
   }
 `
-
 
 const StyledRectContainer = styled.div`
   position: relative;

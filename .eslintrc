@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "standard",
+    "standard-react",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:promise/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 10,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "strict": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-fragments": [
+      "error",
+      "element"
+    ]
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "standard"
+  ],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

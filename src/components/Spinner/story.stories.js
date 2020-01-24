@@ -1,14 +1,14 @@
-import React from "react";
-import Spinner from './index';
-import { select } from '@storybook/addon-knobs';
-import { color } from "../../designTokens";
+import React from 'react'
+import Spinner from './index'
+import { select } from '@storybook/addon-knobs'
+import { color } from '../../designTokens'
 
 export default {
-  title: "Spinner"
-};
+  title: 'Spinner'
+}
 
-export const DefaultSpinner = () => 
+export const DefaultSpinner = () =>
   <Spinner
     size={select('Size', ['1rem', '8px', '24px', '36px'])}
-    fill={select('Fill color', [color.mediumdark, color.red, color.yellow, color.black])} />
-;
+    fill={select('Fill color', [color.mediumdark, color.red, color.yellow, color.black])}
+  />
