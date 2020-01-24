@@ -4,16 +4,16 @@ export default create({
   base: 'light',
 
   // colorPrimary: 'hotpink',
-  // colorSecondary: 'deepskyblue',
+  colorSecondary: '#777777',
 
   // UI
-  // appBg: 'white',
+  appBg: '#f3f3f3',
   // appContentBg: 'silver',
   // appBorderColor: 'grey',
   // appBorderRadius: 4,
 
   // Typography
-  // fontBase: '"Open Sans", sans-serif',
+  fontBase: '"Helvetica Neue", Helvetica, Arial, sans-serif;',
   // fontCode: 'monospace',
 
   // Text colors
