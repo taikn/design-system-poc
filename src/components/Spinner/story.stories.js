@@ -4,7 +4,7 @@ import { select } from '@storybook/addon-knobs'
 import { color } from '../../designTokens'
 
 export default {
-  title: 'Loading indicators'
+  title: 'Components|Loading indicators'
 }
 
 export const Spinner = () =>
