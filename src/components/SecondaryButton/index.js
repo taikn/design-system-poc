@@ -3,17 +3,17 @@ import PropTypes from 'prop-types'
 
 import { color } from '../../designTokens'
 import {
-  StyledPrimaryButton
+  StyledSecondaryButton
 } from './styles'
-import Spinner from '../Spinner'
 import {
   StyledContentsWrapper,
   StyledContents,
   SpinnerWrapper
 } from '../ButtonBase/styles'
+import Spinner from '../Spinner'
 
-const PrimaryButton = ({ children, awaiting, disabled, ...rest }) => (
-  <StyledPrimaryButton
+const SecondaryButton = ({ children, awaiting, disabled, ...rest }) => (
+  <StyledSecondaryButton
     disabled={disabled || awaiting}
     {...rest}
   >
@@ -23,13 +23,13 @@ const PrimaryButton = ({ children, awaiting, disabled, ...rest }) => (
       </StyledContents>
       {awaiting &&
         <SpinnerWrapper>
-          <Spinner fill={color.white} size='0.75rem' />
+          <Spinner fill={color.medium} size='0.75rem' />
         </SpinnerWrapper>}
     </StyledContentsWrapper>
-  </StyledPrimaryButton>
+  </StyledSecondaryButton>
 )
 
-PrimaryButton.propTypes = {
+SecondaryButton.propTypes = {
   alternate: PropTypes.bool,
   awaiting: PropTypes.bool,
   children: PropTypes.node.isRequired,
@@ -38,8 +38,8 @@ PrimaryButton.propTypes = {
   type: PropTypes.string
 }
 
-PrimaryButton.defaultProps = {
+SecondaryButton.defaultProps = {
   type: 'button'
 }
 
-export default PrimaryButton
+export default SecondaryButton

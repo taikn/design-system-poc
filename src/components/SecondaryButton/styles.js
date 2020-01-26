@@ -3,8 +3,10 @@ import { color } from '../../designTokens'
 import { lighten } from 'polished'
 import { StyledButton } from '../ButtonBase/styles'
 
-const StyledPrimaryButton = styled(StyledButton)`
-  color: ${color.white};
+const StyledSecondaryButton = styled(StyledButton)`
+  color: ${props => props.alternate
+    ? color.dark
+    : color.red};
   border: ${props => props.alternate
     ? css`
       0.125rem solid ${color.dark}
@@ -12,16 +14,14 @@ const StyledPrimaryButton = styled(StyledButton)`
     : css`
       0.125rem solid ${color.red}
     `};
-  background-color: ${props => props.alternate
-    ? color.dark
-    : color.red};
+  background-color: transparent;
 
   :hover
   {
     border-color: ${props => props.alternate
       ? lighten(0.05, color.dark)
       : lighten(0.05, color.red)};
-    background-color: ${props => props.alternate
+    color: ${props => props.alternate
       ? lighten(0.05, color.dark)
       : lighten(0.05, color.red)};
   }
@@ -29,12 +29,12 @@ const StyledPrimaryButton = styled(StyledButton)`
   :disabled
   {
     border-color: ${color.medium};
-    background-color: ${color.medium};
+    color: ${color.medium};
     pointer-events: none;
     cursor: default;
   }
 `
 
 export {
-  StyledPrimaryButton
+  StyledSecondaryButton
 }

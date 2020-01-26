@@ -45,9 +45,9 @@ export const color = {
 
 export const spacing = {
   padding: {
-    small: 10,
-    medium: 20,
-    large: 30
+    small: 8,
+    medium: 16,
+    large: 32
   },
   borderRadius: {
     small: 5,
@@ -61,21 +61,21 @@ export const typography = {
     code: '"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace'
   },
   weight: {
+    light: '300',
     regular: '400',
-    bold: '700',
-    extrabold: '800',
-    black: '900'
+    semibold: '600',
+    bold: '700'
   },
   size: {
-    s1: '12',
-    s2: '14',
-    s3: '16',
-    m1: '20',
-    m2: '24',
-    m3: '28',
-    l1: '32',
-    l2: '40',
-    l3: '48',
+    s1: '.75rem',
+    s2: '.875rem',
+    s3: '1rem',
+    m1: '1.25rem',
+    m2: '1.5rem',
+    m3: '1.75rem',
+    l1: '2rem',
+    l2: '2.5rem',
+    l3: '3rem',
     code: '90'
   }
 }
