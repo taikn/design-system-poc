@@ -12,10 +12,6 @@ import {
   SpinnerWrapper
 } from '../ButtonBase/styles'
 
-/**
-  A variety of buttons at a glance
-*/
-
 const PrimaryButton = ({ children, awaiting, disabled, ...rest }) => (
   <StyledPrimaryButton
     disabled={disabled || awaiting}

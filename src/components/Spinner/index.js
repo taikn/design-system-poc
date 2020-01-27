@@ -16,7 +16,13 @@ const Spinner = ({ size, fill }) => (
 )
 
 Spinner.propTypes = {
+  /**
+    Spinner size - dont use spinner smaller than 8px
+  */
   size: PropTypes.string,
+  /**
+    Spinner fill color
+  */
   fill: PropTypes.string
 }
 

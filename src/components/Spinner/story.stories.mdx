@@ -1,0 +1,23 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks'
+import { select } from '@storybook/addon-knobs'
+import { color } from '../../designTokens'
+import Spinner from './index'
+
+<Meta title='Components|Loading indicators' />
+
+## Spinner
+
+Used to indicate loading state, can be used separately or inside a component
+
+<Preview>
+  <Story name='Spinner'>
+    <Spinner
+      size={select('Size', ['1rem', '8px', '24px', '36px'])}
+      fill={select('Fill color', [color.mediumdark, color.red, color.yellow, color.black])}
+    />
+  </Story>
+</Preview>
+
+### Available props
+
+<Props of={Spinner} />

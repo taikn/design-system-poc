@@ -1,0 +1,32 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks'
+import PrimaryButton from '../PrimaryButton'
+import SecondaryButton from '../SecondaryButton'
+
+<Meta title='Components|Button' />
+
+## Overview
+
+Button provides a simple way to trigger an event. Below is a variety of buttons at a glance
+
+<Preview>
+  <Story name='Overview'>
+    <React.Fragment>
+      <PrimaryButton>
+        Push it
+      </PrimaryButton>
+      <SecondaryButton>
+        Cancel
+      </SecondaryButton>
+      <PrimaryButton alternate>
+        Alternate action
+      </PrimaryButton>
+      <SecondaryButton alternate>
+        Alternate cancel
+      </SecondaryButton>
+    </React.Fragment>
+  </Story>
+</Preview>
+
+### Props — same for all button types
+
+<Props of={PrimaryButton} />
