@@ -12,6 +12,10 @@ import {
   SpinnerWrapper
 } from '../ButtonBase/styles'
 
+/**
+  A variety of buttons at a glance
+*/
+
 const PrimaryButton = ({ children, awaiting, disabled, ...rest }) => (
   <StyledPrimaryButton
     disabled={disabled || awaiting}
@@ -30,11 +34,29 @@ const PrimaryButton = ({ children, awaiting, disabled, ...rest }) => (
 )
 
 PrimaryButton.propTypes = {
+  /**
+    Alternative, dark grey button appearance
+  */
   alternate: PropTypes.bool,
+  /**
+    Use the awaiting state to indicate that action is still in progress, disables button
+  */
   awaiting: PropTypes.bool,
+  /**
+    Button label
+  */
   children: PropTypes.node.isRequired,
+  /**
+    Avoid duplicate actions by passing a disabled flag to the button
+  */
   disabled: PropTypes.bool,
+  /**
+    React event handler
+  */
   onClick: PropTypes.func,
+  /**
+    Available types are: submit, button or reset
+  */
   type: PropTypes.string
 }
 

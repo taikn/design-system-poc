@@ -4,8 +4,7 @@ import { action } from '@storybook/addon-actions'
 import PrimaryButton from './index'
 
 export default {
-  title: 'Components|Buttons',
-  component: PrimaryButton
+  title: 'Components|Button'
 }
 
 export const Primary = () =>
@@ -16,3 +15,11 @@ export const Primary = () =>
   >
     {text('Label', 'Verify your email')}
   </PrimaryButton>
+
+Primary.story = {
+  parameters: {
+    docs: {
+      page: null
+    }
+  }
+}

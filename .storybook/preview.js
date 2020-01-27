@@ -7,11 +7,12 @@ import { GlobalStyle } from '../src/globalStyles.js';
 
 addDecorator(withKnobs);
 addDecorator(story => (
-  <>
+  <React.Fragment>
     <GlobalStyle />
-    {story()}
-  </>
+      {story()}
+  </React.Fragment>
 ));
+
 
 addParameters({
   docs: {

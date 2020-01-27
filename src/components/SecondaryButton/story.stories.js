@@ -4,8 +4,7 @@ import { action } from '@storybook/addon-actions'
 import SecondaryButton from './index'
 
 export default {
-  title: 'Components|Buttons',
-  component: SecondaryButton
+  title: 'Components|Button'
 }
 
 export const Secondary = () =>
@@ -16,3 +15,11 @@ export const Secondary = () =>
   >
     {text('Label', 'Start all over')}
   </SecondaryButton>
+
+Secondary.story = {
+  parameters: {
+    docs: {
+      page: null
+    }
+  }
+}
