@@ -4,7 +4,8 @@ import { action } from '@storybook/addon-actions'
 import SecondaryButton from './index'
 
 export default {
-  title: 'Components|Buttons'
+  title: 'Components|Buttons',
+  component: SecondaryButton
 }
 
 export const Secondary = () =>

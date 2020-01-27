@@ -4,7 +4,8 @@ import { action } from '@storybook/addon-actions'
 import PrimaryButton from './index'
 
 export default {
-  title: 'Components|Buttons'
+  title: 'Components|Buttons',
+  component: PrimaryButton
 }
 
 export const Primary = () =>
