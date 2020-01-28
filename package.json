@@ -6,7 +6,7 @@
     "start": "start-storybook --ci --port 6006 --static-dir public",
     "build": "rollup --config",
     "build:storybook": "build-storybook --static-dir public",
-    "release": "env-cmd release-it",
+    "release": "npm run build && env-cmd release-it",
     "lint:js": "eslint . --fix",
     "lint:css": "stylelint 'src/**/*.js'"
   },
