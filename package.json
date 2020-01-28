@@ -1,6 +1,6 @@
 {
   "name": "design-system-poc",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "trying out storybook with react and rollup",
   "scripts": {
     "start": "start-storybook --ci --port 6006 --static-dir public",
