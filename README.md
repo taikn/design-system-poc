@@ -8,6 +8,17 @@ Package requires `react`, `react-dom`, `prop-types`, `styled-components` and `po
 npm install react react-dom prop-types styled-components polished design-system-poc --save
 ```
 
+## Usage
+```javascript
+import { PrimaryButton } from 'design-system-poc'
+
+...
+
+<PrimaryButton>
+  Push it
+</PrimaryButton>
+```
+
 ## Development
 Clone the repo, and run following inside the repo directory
 
