@@ -50,6 +50,7 @@
     "@storybook/addon-knobs": "^5.3.9",
     "@storybook/addon-links": "^5.3.9",
     "@storybook/react": "^5.3.9",
+    "auto": "^9.8.0",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.7",
@@ -77,5 +78,12 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.9.0"
   },
-  "browserslist": "> 0.5%, not dead"
+  "browserslist": "> 0.5%, not dead",
+  "auto": {
+    "plugins": [
+      "npm",
+      "released"
+    ],
+    "onlyPublishWithReleaseLabel": true
+  }
 }
