@@ -20,7 +20,7 @@ import { PrimaryButton } from 'design-system-poc'
 ```
 
 ## Development
-Clone the repo, and run following inside the repo directory
+Clone the repo, and run following inside the directory
 
 ```bash
 npm install
