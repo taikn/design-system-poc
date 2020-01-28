@@ -78,12 +78,5 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.9.0"
   },
-  "browserslist": "> 0.5%, not dead",
-  "auto": {
-    "plugins": [
-      "npm",
-      "released"
-    ],
-    "onlyPublishWithReleaseLabel": true
-  }
+  "browserslist": "> 0.5%, not dead"
 }
