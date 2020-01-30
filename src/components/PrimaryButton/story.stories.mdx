@@ -13,10 +13,9 @@ The most important button out there
   <Story name='Primary Button'>
     <PrimaryButton
       alternate={boolean('Alternate')}
-      awaiting={boolean('Awaiting')}
+      isLoading={boolean('isLoading')}
       onClick={action('button-click')}
-    >
-      {text('Label', 'Verify your email')}
-    </PrimaryButton>
+      label={text('Label', 'Verify your email')}
+    />
   </Story>
 </Preview>

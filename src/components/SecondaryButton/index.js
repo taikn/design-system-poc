@@ -12,16 +12,16 @@ import {
 } from '../ButtonBase/styles'
 import Spinner from '../Spinner'
 
-const SecondaryButton = ({ children, awaiting, disabled, ...rest }) => (
+const SecondaryButton = ({ label, children, isLoading, disabled, ...rest }) => (
   <StyledSecondaryButton
-    disabled={disabled || awaiting}
+    disabled={disabled || isLoading}
     {...rest}
   >
     <StyledContentsWrapper>
       <StyledContents>
-        {children}
+        {label || children}
       </StyledContents>
-      {awaiting &&
+      {isLoading &&
         <SpinnerWrapper>
           <Spinner fill={color.medium} size='0.75rem' />
         </SpinnerWrapper>}
@@ -30,9 +30,11 @@ const SecondaryButton = ({ children, awaiting, disabled, ...rest }) => (
 )
 
 SecondaryButton.propTypes = {
+  id: PropTypes.string,
   alternate: PropTypes.bool,
-  awaiting: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  isLoading: PropTypes.bool,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  children: PropTypes.node,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   type: PropTypes.string

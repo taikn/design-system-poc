@@ -12,16 +12,16 @@ import {
   SpinnerWrapper
 } from '../ButtonBase/styles'
 
-const PrimaryButton = ({ children, awaiting, disabled, ...rest }) => (
+const PrimaryButton = ({ label, children, isLoading, disabled, ...rest }) => (
   <StyledPrimaryButton
-    disabled={disabled || awaiting}
+    disabled={disabled || isLoading}
     {...rest}
   >
     <StyledContentsWrapper>
       <StyledContents>
-        {children}
+        {label || children}
       </StyledContents>
-      {awaiting &&
+      {isLoading &&
         <SpinnerWrapper>
           <Spinner fill={color.white} size='0.75rem' />
         </SpinnerWrapper>}
@@ -30,18 +30,23 @@ const PrimaryButton = ({ children, awaiting, disabled, ...rest }) => (
 )
 
 PrimaryButton.propTypes = {
+  id: PropTypes.string,
   /**
     Alternative, dark grey button appearance
   */
   alternate: PropTypes.bool,
   /**
-    Use the awaiting state to indicate that action is still in progress, disables button
+    Use the isLoading state to indicate that action is still in progress, disables button
   */
-  awaiting: PropTypes.bool,
+  isLoading: PropTypes.bool,
   /**
     Button label
   */
-  children: PropTypes.node.isRequired,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  /**
+    Button label (optional)
+  */
+  children: PropTypes.node,
   /**
     Avoid duplicate actions by passing a disabled flag to the button
   */
