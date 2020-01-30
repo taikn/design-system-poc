@@ -1,3 +1,11 @@
+# v0.1.5 (Thu Jan 30 2020)
+
+- Adjusted `props` layout
+
+
+___
+
+
 # v0.1.4 (Tue Jan 28 2020)
 
 - Automated publishing to github and npm
