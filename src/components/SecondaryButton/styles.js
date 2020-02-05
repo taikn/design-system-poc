@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { color } from '../../designTokens'
 import { lighten } from 'polished'
 import { StyledButton } from '../ButtonBase/styles'
@@ -7,13 +7,9 @@ const StyledSecondaryButton = styled(StyledButton)`
   color: ${props => props.alternate
     ? color.dark
     : color.red};
-  border: ${props => props.alternate
-    ? css`
-      0.125rem solid ${color.dark}
-    `
-    : css`
-      0.125rem solid ${color.red}
-    `};
+  border: 0.125rem solid ${props => props.alternate
+    ? color.dark
+    : color.red};
   background-color: transparent;
 
   :hover
