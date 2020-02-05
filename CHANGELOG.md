@@ -1,3 +1,11 @@
+# v0.1.6 (Wed Feb 05 2020)
+
+- Bumped deps + some minor css adjustments
+
+
+___
+
+
 # v0.1.5 (Thu Jan 30 2020)
 
 - Adjusted `props` layout
