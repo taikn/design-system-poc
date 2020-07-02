@@ -11,6 +11,7 @@ const StyledButton = styled.button`
   outline: none;
   user-select: none;
   cursor: pointer;
+  border-radius: 0;
 `
 
 const StyledContentsWrapper = styled.span`
